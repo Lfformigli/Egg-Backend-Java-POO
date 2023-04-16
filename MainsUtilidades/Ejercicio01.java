@@ -1,4 +1,4 @@
-package MainUtilidades;
+package MainsUtilidades;
 
 import Entidades.Cadena;
 import Servicios.servicioCadena;

@@ -1,4 +1,4 @@
-package MainUtilidades;
+package MainsUtilidades;
 
 import Entidades.parDeNumeros;
 import Servicios.servicioParDeNumeros;

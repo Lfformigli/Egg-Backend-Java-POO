@@ -1,4 +1,4 @@
-package MainServices;
+package MainsServicios;
 
 import Entidades.Persona;
 import Servicios.servicioPersona;
@@ -14,7 +14,10 @@ public class Ejercicio03 {
 
         if (svPersona.esMayorDeEdad(p1)) {
             System.out.println(p1.getNombre() + " es mayor de edad");
+        } else {
+            System.out.println(p1.getNombre() + " es menor de edad");
         }
+        
 
         switch (svPersona.calcularIMC(p1)) {
             case -1:
@@ -26,13 +29,15 @@ public class Ejercicio03 {
             default:
                 System.out.println("La persona esta en sobrepeso");
                 break;
-        }
+        } 
 
         //PERSONA 2
         Persona p2 = svPersona.crearPersona();
 
         if (svPersona.esMayorDeEdad(p2)) {
             System.out.println(p2.getNombre() + " es mayor de edad");
+        } else {
+            System.out.println(p2.getNombre() + " es menor de edad");
         }
 
         switch (svPersona.calcularIMC(p2)) {
@@ -52,6 +57,8 @@ public class Ejercicio03 {
 
         if (svPersona.esMayorDeEdad(p3)) {
             System.out.println(p3.getNombre() + " es mayor de edad");
+        } else {
+            System.out.println(p3.getNombre() + " es menor de edad");
         }
 
         switch (svPersona.calcularIMC(p3)) {
@@ -71,6 +78,8 @@ public class Ejercicio03 {
 
         if (svPersona.esMayorDeEdad(p4)) {
             System.out.println(p4.getNombre() + " es mayor de edad");
+        }else {
+            System.out.println(p4.getNombre() + " es menor de edad");
         }
 
         switch (svPersona.calcularIMC(p4)) {
@@ -87,6 +96,9 @@ public class Ejercicio03 {
 
         int[] IMC = {svPersona.calcularIMC(p1),svPersona.calcularIMC(p2),svPersona.calcularIMC(p3),svPersona.calcularIMC(p4)};
         boolean[] Edad = {svPersona.esMayorDeEdad(p1),svPersona.esMayorDeEdad(p2),svPersona.esMayorDeEdad(p3),svPersona.esMayorDeEdad(p4)};
+        
+        svPersona.promedioIMC(IMC);
+        svPersona.promedioEdad(Edad);
         
         
     }   

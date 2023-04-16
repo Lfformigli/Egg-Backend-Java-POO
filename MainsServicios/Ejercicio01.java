@@ -1,4 +1,4 @@
-package MainServices;
+package MainsServicios;
 
 import Entidades.CuentaBancaria;
 import Servicios.servicioCuentaBancaria;

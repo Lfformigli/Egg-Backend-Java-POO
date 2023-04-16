@@ -1,4 +1,4 @@
-package MainNormales;
+package MainsNormales;
 
 import Entidades.Circulo;
 

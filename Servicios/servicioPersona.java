@@ -29,7 +29,7 @@ public class servicioPersona {
                 System.out.println("Ingreso incorrecto");
             }
 
-        } while (!sexo.equalsIgnoreCase("H") && !sexo.equalsIgnoreCase("M") && !sexo.equals("O"));
+        } while (!sexo.equalsIgnoreCase("H") && !sexo.equalsIgnoreCase("M") && !sexo.equalsIgnoreCase("O"));
 
         System.out.println("Ingrese el peso (kg)");
         p1.setPeso(read.nextDouble());
@@ -51,7 +51,6 @@ public class servicioPersona {
     public int calcularIMC(Persona p) {
 
         double IMC = p.getPeso() / Math.pow(p.getAltura(), 2);
-
 
         if (IMC < 20) {
             return -1;
@@ -84,9 +83,30 @@ public class servicioPersona {
             }
         }
         
-        System.out.println("El porcentaje de personas con bajo peso es: " + cont0*100/4);
-        System.out.println("El porcentaje de personas con peso ideal es: " + cont1*100/4);
-        System.out.println("El porcentaje de personas con sobrepeso es: " + cont2*100/4);
+        System.out.println("El porcentaje de personas con bajo peso es: " + cont0*100/4 + "%") ;
+        System.out.println("El porcentaje de personas con peso ideal es: " + cont1*100/4 + "%");
+        System.out.println("El porcentaje de personas con sobrepeso es: " + cont2*100/4 + "%");
         
     }
+    
+    public void promedioEdad(boolean edad[]) {
+        
+        int may=0;
+        int men=0;
+        
+        for (int i = 0; i < 4; i++) {
+            
+            if (edad[i]) {
+                may++;
+            } else {
+                men++;
+            }
+            
+        }
+        
+        System.out.println("El porcentaje de mayores de edad es: " + may*100/4 + "%");
+        System.out.println("El porcentaje de menores de edad es: " + men*100/4 + "%");
+        
+    }
+    
 }

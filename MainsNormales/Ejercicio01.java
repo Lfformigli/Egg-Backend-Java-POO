@@ -1,4 +1,4 @@
-package MainNormales;
+package MainsNormales;
 
 import Entidades.Libro;
 import java.util.Scanner;
