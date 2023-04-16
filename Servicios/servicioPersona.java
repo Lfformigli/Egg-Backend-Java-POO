@@ -23,13 +23,13 @@ public class servicioPersona {
             System.out.println("Ingrese el sexo (H/M/O)");
             sexo = read.next();
 
-            if (sexo.equals("H") || sexo.equals("M") || sexo.equals("O")) {
+            if (sexo.equalsIgnoreCase("H") || sexo.equalsIgnoreCase("M") || sexo.equalsIgnoreCase("O")) {
                 p1.setSexo(sexo);
             } else {
                 System.out.println("Ingreso incorrecto");
             }
 
-        } while (!sexo.equals("H") && !sexo.equals("M") && !sexo.equals("O"));
+        } while (!sexo.equalsIgnoreCase("H") && !sexo.equalsIgnoreCase("M") && !sexo.equals("O"));
 
         System.out.println("Ingrese el peso (kg)");
         p1.setPeso(read.nextDouble());
@@ -52,7 +52,6 @@ public class servicioPersona {
 
         double IMC = p.getPeso() / Math.pow(p.getAltura(), 2);
 
-        System.out.println(IMC);
 
         if (IMC < 20) {
             return -1;
@@ -61,5 +60,33 @@ public class servicioPersona {
         } else {
             return 1;
         }
+    }
+    
+    public void promedioIMC(int IMC[]) {
+        
+        int cont0=0;
+        int cont1=0;
+        int cont2=0;
+        
+        
+        for (int i = 0; i < 4; i++) {
+            
+            switch (IMC[i]) {
+                case -1:
+                    cont0++;
+                    break;
+                case 0:
+                    cont1++;
+                    break;
+                case 1:
+                    cont2++;
+                    break;
+            }
+        }
+        
+        System.out.println("El porcentaje de personas con bajo peso es: " + cont0*100/4);
+        System.out.println("El porcentaje de personas con peso ideal es: " + cont1*100/4);
+        System.out.println("El porcentaje de personas con sobrepeso es: " + cont2*100/4);
+        
     }
 }
